@@ -238,7 +238,21 @@
     gap: 1rem;
     margin-right: 6rem;
 
-}</style>
+}
+@media only screen and (max-width: 767px) {
+  .images-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .images-container2 img {
+    margin: 5px;
+    height: auto;
+    width: 40%;
+    max-width: 100px;
+  }
+}
+</style>
 
 
 <div class="container">
