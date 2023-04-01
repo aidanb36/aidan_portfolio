@@ -56,6 +56,18 @@
     </div>
 </nav>
 
+<style>
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+    .visible {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+</style>
+
 
 <!-- Carousel wrapper -->
 <div id="carouselExampleControls" class="carousel slide text-center carousel-dark" data-ride="carousel">
@@ -95,7 +107,7 @@
 </style>
 <!-- Carousel wrapper -->
 
-
+<div class="slide-in">
 <div class="section" id="about">
 	<div class="container">
 	<div style="background-color: #414456; color: white" class="card aos-init aos-animate"
@@ -158,9 +170,10 @@
 	</div>
 	</div>
 </div>
-
+</div>
 <br>
 
+<div class="slide-in">
 <div  class="section" id="skill">
 	<div style class="container my-2">
 	<div  style="color: white" class="h3 text-left mb-4 title" id="educational-info">
@@ -192,7 +205,9 @@
 	</div>
 </div>
     <br>
+</div>
 
+<div class="slide-in">
 <div  class="section" id="skill">
 	<div style class="container my-2">
 	<div  style="color: white" class="h3 text-left mb-4 title" id="educational-info">
@@ -212,7 +227,7 @@
 		</p>
 		</div>
             <div class="images-container2">
-                    <img style="height: 60px; width: 60px" src="https://assets.stickpng.com/images/5848104fcef1014c0b5e4950.png" alt="Image 1"  />
+                    <img style="height: 60px; width: 60px" src="https://pngimg.com/uploads/mysql/mysql_PNG11.png" alt="Image 1"  />
                     <img style="height: 60px; width: 60px" src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png" alt="Image 1"  />
                     <img style="height: 60px; width: 60px" src="https://www.cilans.net/wp-content/uploads/2019/12/Python-Pandas-logo.png" alt="Image 1"  />
                     <img style="height: 60px; width: 60px" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="Image 1"  />
@@ -221,7 +236,7 @@
 	</div>
 	</div>
 </div>
-
+</div>
 <style>.card-body3 {
     display: flex;
     justify-content: flex-start;
@@ -254,7 +269,6 @@
   }
 }
 </style>
-
 
 <div class="container">
 	<div  class="section" id="contact">
@@ -366,8 +380,6 @@
 </div>
 </div>
 
-</div>
-
 
 <!-- Optional JavaScript; choose one of the two! -->
 
@@ -376,6 +388,26 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var slideInElements = document.querySelectorAll('.slide-in');
+
+      function slideInOnScroll() {
+        slideInElements.forEach(function (element) {
+          var elementTop = element.getBoundingClientRect().top;
+          var windowHeight = window.innerHeight;
+
+          if (elementTop < windowHeight * 0.75) {
+            element.classList.add('visible');
+          } else {
+            element.classList.remove('visible');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', slideInOnScroll);
+    });
+</script>
 </body>
 
 </html>
