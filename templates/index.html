@@ -47,7 +47,7 @@
                 <a class="nav-link text-white" href="#educational-info">Education</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#Prof-skill">Professional Skills</a>
+            <a class="nav-link text-white" href="#skill">Professional Skills</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-white" href="#contact-us">Contact Me</a>
@@ -237,6 +237,7 @@
 	</div>
 </div>
 </div>
+</div>
 <style>.card-body3 {
     display: flex;
     justify-content: flex-start;
@@ -281,7 +282,7 @@
 				Contact Me
 			</div>
 
-			<div style="background-color: #696767" class="card mb-0" data-aos="zoom-in">
+			<div style="background-color: #696767" class="card mb-0">
 
 				<div class="row">
 				<div class="col-md-6">
@@ -335,10 +336,10 @@
 						<div class="row">
 						<div class="col">
 
-							<button class="btn btn-primary" type="submit">
+							<button style="background-color: darkgray" class="btn btn-primary" type="submit">
 							Send
 							</button>
-							<a class="btn btn-primary" target="_blank"
+							<a style="background-color: darkgray" class="btn btn-primary" target="_blank"
 							href="{{ url_for('static',filename='Aidan Brown Resume.pdf') }}"
 							data-aos="zoom-in"
 							data-aos-anchor="data-aos-anchor">
@@ -350,7 +351,7 @@
 					</form>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div style="font-size: 20px" class="col-md-6">
 					<div class="card-body">
 					<p class="mb-0">
 						<strong>Address </strong>
@@ -365,7 +366,7 @@
 					<p class="mb-0"><strong>Email</strong></p>
 
 
-<p>aidanb363@gmail.com</p>
+                    <p>aidanb363@gmail.com</p>
 
 					</div>
 				</div>
@@ -408,6 +409,7 @@
       window.addEventListener('scroll', slideInOnScroll);
     });
 </script>
+
 </body>
 
 </html>
